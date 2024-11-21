@@ -1,0 +1,653 @@
+/* Global Styles */
+html{
+  scroll-behavior: smooth;
+
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Navigation Bar */
+  /* Fixing Menu Alignment */
+/* Navbar */
+.logo img {
+    max-height: 90px; /* Ensures the logo fits within the navbar */
+    width: auto; /* Maintains aspect ratio */
+  }
+.navbar {
+    background-color: #001918;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex; /* Ensures items are placed in a row */
+    justify-content: space-between; /* Space between logo, nav links, and button */
+    align-items: center; /* Align items vertically in the center */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+  }
+
+  /* Burger Icon */
+.burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.burger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 5px;
+}
+  
+  .nav-links {
+    display: flex; /* Horizontal alignment for nav links */
+    list-style: none;
+    gap: 2rem; /* Adds space between nav links */
+    margin: 0; /* Removes default margin */
+  }
+  
+  .nav-links li {
+    margin: 0; /* Ensures consistent spacing */
+  }
+  
+  .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  .nav-links a:hover {
+    color: #00bcd4;
+  }
+  
+  .cta-button {
+    background: #00bcd4;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .cta-button:hover {
+    background: #0097a7;
+  }
+  
+  /* Ensures the logo, nav-links, and button are on the same line */
+  .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    white-space: nowrap; /* Prevents the logo from wrapping to the next line */
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px; /* Optional: Constrain width for large screens */
+    margin: 0 auto;
+  }
+  
+  
+  /* Hero Section */
+  /* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    overflow: hidden;
+    margin-top: 70px; /* Adjust for navbar height */
+  }
+  
+  .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the video covers the entire background */
+    z-index: -1; /* Places the video behind the content */
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text readability */
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2; /* Places content above the overlay and video */
+    max-width: 700px;
+    padding: 0 1rem;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.3rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-button {
+    background: #00bcd4;
+    color: #fff;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .hero-button:hover {
+    background: #0097a7;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* About Us Section */
+/* About Us Section */
+.about-us {
+    padding: 4rem 2rem;
+    background-color: #f9f9f9;
+  }
+  
+  .about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+  }
+  
+  .about-text {
+    text-align: center;
+  }
+  
+  .about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  /* Cards Section */
+  .about-cards {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    flex: 1;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-icon {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    color: #00bcd4;
+  }
+  
+  .card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  /* Services Section */
+.services {
+    padding: 4rem 2rem;
+    background-color: #001918;
+    text-align: center;
+  }
+  
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .services h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #ffff;
+  }
+  
+  .services p {
+    font-size: 1.2rem;
+    color: #ffff;
+    margin-bottom: 2rem;
+  }
+  /* Team Section */
+.team {
+    padding: 4rem 2rem;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  
+  .team-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .team h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .team p {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 2rem;
+  }
+  
+  /* Team Members Grid */
+  .team-members {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .team-member {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+  }
+  
+  .team-member h3 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  .team-member #title {
+    font-size: 1rem;
+    color: #00bcd4;
+    font-weight: bold;
+    line-height: 1.6;
+  }
+  
+  .team-member p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+
+  .linkedin-link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #0077b5; /* LinkedIn blue */
+    font-size: 16px;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+  }
+  
+  .linkedin-link i {
+    margin-right: 8px;
+    font-size: 18px;
+  }
+  
+  .linkedin-link:hover {
+    color: #005582; /* Darker LinkedIn blue for hover effect */
+  }
+  
+  
+  /* Service Cards Layout */
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .service-card {
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 350px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-icon {
+    font-size: 3rem;
+    color: #00bcd4;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .service-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background-color: #00bcd4;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background 0.3s;
+  }
+  
+  .service-btn:hover {
+    background-color: #0097a7;
+  }
+
+  
+    /* Media Queries for Mobile */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #001918;
+        width: 100%;
+        padding: 1rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .burger {
+        display: flex;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+    }
+
+    .hero-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-members {
+        grid-template-columns: 1fr;
+    }
+
+    .service-cards {
+        grid-template-columns: 1fr;
+    }
+}
+
+#courses {
+  text-align: center;
+  padding: 30px;
+  background-color: #f4f4f4;
+}
+
+#courses h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+  font-weight: bold;
+  color: #333;
+}
+
+.courses-container {
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  flex-wrap: wrap;
+}
+
+.course-box {
+  background: linear-gradient(135deg, rgba(0, 204, 255, 0.844), rgb(60, 168, 185));
+  border-radius: 15px;
+  padding: 30px;
+  width: 250px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.course-box h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.course-box p {
+  font-size: 14px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 18px;
+  color: #fff;
+  background-color: #333;
+  padding: 5px 15px;
+  border-radius: 50px;
+  margin-bottom: 15px;
+  display: inline-block;
+}
+
+.enroll-btn {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.enroll-btn:hover {
+  background-color: #f06;
+}
+
+.course-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.student .course-box {
+  background: linear-gradient(135deg, #4c6ef5, #5a8bff); /* Different color for student pricing */
+}
+
+
+footer {
+  background: #fff;
+  color: #333;
+  font-family: Arial, sans-serif;
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 5%;
+}
+
+.footer-section {
+  flex: 1 1 200px;
+  margin: 15px;
+}
+
+.footer-section h3, .footer-section h4 {
+  font-size: 20px;
+  color: #00bcd4;
+  margin-bottom: 15px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.social-icons {
+  display: flex;
+  gap: 10px;
+}
+
+.social-icons a {
+  width: 24px;
+  height: 24px;
+}
+.social-icon{
+  width: 50px;
+  height: 50px;
+  color: #333;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.2rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .about-cards {
+        flex-direction: column;
+    }
+}
+  
