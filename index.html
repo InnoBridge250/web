@@ -1,251 +1,162 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>INNO Bridge</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation Menu -->
-  <header class="navbar">
-    <div class="container">
-      <div class="logo">
-        <img src="logo.png" alt="INNO Bridge Logo" />
-    </div>
-    
-      <nav>
-        <div class="burger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="logo.png" alt="INNO Bridge Logo">
+            </div>
+            <nav>
+                <div class="burger" onclick="toggleMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="https://forms.gle/8x4u5Mx1uGB4btxB7" class="cta-button">Enroll In Our Trainings</a>
         </div>
-        <ul class="nav-links">
-          <li><a href="#">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <a href="https://forms.gle/8x4u5Mx1uGB4btxB7" class="cta-button">Enroll In Our Trainings</a>
-    </div>
-  </header>
+    </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <video class="hero-video" autoplay muted loop playsinline>
-      <source src="heo-back.mp4" type="video/mp4" />
-      Your browser does not support the video tag.
-    </video>
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Empowering Businesses with Data-Driven Insights</h1>
-      <p>Your trusted partner for innovation, market research, and financial planning.</p>
-      <a href="#learn-more" class="hero-button">Learn More</a>
-    </div>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="heo-back.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <h1>Empowering Businesses with Data-Driven Insights</h1>
+            <p>Your trusted partner for innovation, market research, and financial planning.</p>
+            <a href="#learn-more" class="hero-button">Learn More</a>
+        </div>
+    </section>
 
-  <!-- About-->
+    <!-- About Section -->
+    <section class="about-us" id="about">
+        <div class="about-container">
+            <div class="about-text">
+                <h2>About INNO Bridge</h2>
+                <p>
+                    At INNO Bridge, we empower startups and entrepreneurs with actionable insights to make informed decisions. From customized market research to data-driven analytics, our solutions are designed to help businesses grow and succeed in competitive markets.
+                </p>
+            </div>
+            <div class="about-cards">
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Our Mission</h3>
+                    <p>To bridge the gap between data and decision-making for startups and small businesses.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Our Vision</h3>
+                    <p>To be the leading consultancy firm driving business growth through innovation and data.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <section class="about-us" id="about">
-    <div class="about-container">
-      <!-- Text Section -->
-      <div class="about-text">
-        <h2>About INNO Bridge</h2>
-        <p>
-          At INNO Bridge, we empower startups and entrepreneurs with actionable insights to make informed decisions. From customized market research to data-driven analytics, our solutions are designed to help businesses grow and succeed in competitive markets.
-        </p>
-      </div>
-      <!-- Cards Section -->
-      <div class="about-cards">
-        <div class="card">
-          <div class="card-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Our Mission</h3>
-          <p>To bridge the gap between data and decision-making for startups and small businesses.</p>
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <p>We provide a range of consulting services designed to help your business thrive through data-driven decisions.</p>
+            <div class="service-cards">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Business Insights</h3>
+                    <p>Get actionable insights to make informed decisions and achieve sustainable growth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Market Research</h3>
+                    <p>Customized market research to help you understand your industry and customers better.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Financial Planning</h3>
+                    <p>We provide financial planning tools to guide your business through every stage of growth.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Data Analysis</h3>
+                    <p>Harness the power of data to make smarter decisions and improve business outcomes.</p>
+                </div>
+            </div>
         </div>
-        <div class="card">
-          <div class="card-icon">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <h3>Our Vision</h3>
-          <p>To be the leading consultancy firm driving business growth through innovation and data.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!--Our Team-->
-  <section class="team" id="team">
-    <div class="team-container">
-      <h2>Meet Our Team</h2>
-      <p>Our team is composed of experienced professionals dedicated to helping your business grow. With a diverse skill set, we provide tailored solutions for every challenge.</p>
-      
-      <div class="team-members">
-        <!-- Team Member 1 -->
-        <div class="team-member">
-          <img src="francois.jpeg" alt="Team Member 1">
-          <h3>Francois Iradukunda</h3>
-          <p id="title">Data analytics Specialist</p>
-          <p>A seasoned data analyst with expertise in collecting, organizing, and interpreting complex datasets to uncover actionable insights. With a strong foundation in technical analytics, he excel in enabling data-driven decision-making and delivering precision in all analytical endeavors.
-          </p>
-          <a href="https://www.linkedin.com/in/francois-iradukunda-itil%C2%AE-1258951a8/" target="_blank" class="linkedin-link">
-            <i class="fab fa-linkedin"></i> Connect
-          </a>
+    <!-- Courses Section -->
+    <section id="courses">
+        <h2>Our Courses</h2>
+        <div class="courses-container">
+            <div class="course-box">
+                <h3>Introduction to Data Analytics</h3>
+                <p>Gain fundamental knowledge in data analytics, from data collection to analysis.</p>
+                <a href="https://forms.gle/8x4u5Mx1uGB4btxB7" class="enroll-btn">Enroll Now</a>
+            </div>
+            <div class="course-box">
+                <h3>Research Process</h3>
+                <p>Learn the methodologies behind conducting effective research, from planning to execution.</p>
+                <a href="https://forms.gle/8x4u5Mx1uGB4btxB7" class="enroll-btn">Enroll Now</a>
+            </div>
         </div>
-        
-        <!-- Team Member 2 -->
-        <div class="team-member">
-          <img src="Marius.jpg" alt="Team Member 2">
-          <h3>Marius Kevin Ikuzwe</h3>
-          <p id="title">Market Research and Development Specialist</p>
-          <p>A dynamic professional specializing in business growth strategies and market research. They possess a keen ability to identify opportunities for expansion and craft strategies that drive sustainable growth while optimizing operational efficiency.</p>
-          <a href="https://www.linkedin.com/in/mariuskevinikuzwe/" target="_blank" class="linkedin-link">
-            <i class="fab fa-linkedin"></i> Connect
-          </a>
-        </div>
+    </section>
 
-        <!-- Team Member 3 -->
-        <div class="team-member">
-            <img src="revy.jpeg" alt="Team Member 2">
-            <h3>Revy Irihose</h3>
-            <p id="title">Finance and Investment Analyst</p>
-            <p>A highly skilled finance analyst with a focus on financial planning, budgeting, and cost optimization. They provide critical insights that ensure financial stability and support strategic investment decisions, empowering businesses to achieve long-term success.</p>
-            <a href="https://www.linkedin.com/in/jean-revy-irihose-654010232/" target="_blank" class="linkedin-link">
-              <i class="fab fa-linkedin"></i> Connect
-            </a>
-          </div>
-        
-        <!-- Team Member 4 -->
-        <div class="team-member">
-          <img src="francis.jpeg" alt="Team Member 3">
-          <h3>Francis Muhirwa</h3>
-          <p id="title">Digital Innovation Specialist</p>
-          <p>Expert in digital innovation, dedicated to leveraging emerging technologies to enhance business processes and foster digital transformation. They bring valuable insights into technological trends and develop cutting-edge solutions to keep businesses ahead of the curve.</p>
-          <a href="https://www.linkedin.com/in/francis-muhirwa-674786253/" target="_blank" class="linkedin-link">
-            <i class="fab fa-linkedin"></i> Connect
-          </a>
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section about">
+                <h3>INNO Bridge</h3>
+                <p>
+                    Empowering startups and local entrepreneurs with business insights, market research, financial planning tools, and data-driven decision-making support.
+                </p>
+            </div>
+            <div class="footer-section links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#services">Our Services</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact" id="contact">
+                <h4>Contact Us</h4>
+                <p>Email: innobridg@gmail.com</p>
+                <p>Phone: +250 782 682 652</p>
+                <p>Address: KG 383 st, Kigali</p>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
-  
-  
-  <!---Service section-->
-
-  <section class="services" id="services">
-    <div class="services-container">
-      <h2>Our Services</h2>
-      <p>We provide a range of consulting services designed to help your business thrive through data-driven decisions.</p>
-      
-      <div class="service-cards">
-        <!-- Service 1 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-chart-line"></i>
-          </div>
-          <h3>Business Insights</h3>
-          <p>Get actionable insights to make informed decisions and achieve sustainable growth.</p>
-          <a href="#about" class="service-btn">Learn More</a>
+        <div class="footer-bottom">
+            <p>&copy; 2024 INNO Bridge. All rights reserved.</p>
         </div>
-        
-        <!-- Service 2 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-search"></i>
-          </div>
-          <h3>Market Research</h3>
-          <p>Customized market research to help you understand your industry and customers better.</p>
-          <a href="#about" class="service-btn">Learn More</a>
-        </div>
-        
-        <!-- Service 3 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-calculator"></i>
-          </div>
-          <h3>Financial Planning</h3>
-          <p>We provide financial planning tools to guide your business through every stage of growth.</p>
-          <a href="#about" class="service-btn">Learn More</a>
-        </div>
-        
-        <!-- Service 4 -->
-        <div class="service-card">
-          <div class="service-icon">
-            <i class="fas fa-database"></i>
-          </div>
-          <h3>Data Analysis</h3>
-          <p>Harness the power of data to make smarter decisions and improve business outcomes.</p>
-          <a href="#about" class="service-btn">Learn More</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Courses Section -->
-  <section id="courses">
-    <h2>Our Courses</h2>
-    <div class="courses-container">
-      <div class="course-box">
-        <h3>Introduction to Data Analytics</h3>
-        <p>This course will help you gain fundamental knowledge in data analytics, from data collection to analysis.</p>
-        <a href="https://forms.gle/8x4u5Mx1uGB4btxB7" class="enroll-btn">Enroll Now</a>
-      </div>
-  
-      <div class="course-box">
-        <h3>Research Process</h3>
-        <p>Learn the methodologies behind conducting effective research, from planning to execution.</p>
-        <a href="https://forms.gle/8x4u5Mx1uGB4btxB7" class="enroll-btn">Enroll Now</a>
-      </div>
-      
-    </div>
-  </section>
-  
-  <footer>
-    <div class="footer-container">
-      <div class="footer-section about">
-        <h3>INNO Bridge</h3>
-        <p>
-          At INNO Bridge, we empower startups and local entrepreneurs with business insights, customized market research, financial planning tools, and data-driven decision-making support.
-        </p>
-      </div>
-      <div class="footer-section links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#services">Our Services</a></li>
-          <li><a href="#courses">Courses</a></li>
-          <li><a href="#contact">Contact Us</a></li>
-        </ul>
-      </div>
-      <div class="footer-section contact" id="contact">
-        <h4>Contact Us</h4>
-        <p>Email: innobridg@gmail.com</p>
-        <p>Phone: +250 782 682 652</p>
-        <p>Address: KG 383 st, Kigali</p>
-      </div>
-      <div class="footer-section social">
-        <h4>Follow Us</h4>
-        <div class="social-icons">
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p>&copy; 2024 INNO Bridge. All rights reserved.</p>
-    </div>
-  </footer>
-  
-  <script>
-    function toggleMenu() {
-        const navLinks = document.querySelector('.nav-links');
-        navLinks.classList.toggle('active');
-    }
-    
-</script>
+    </footer>
 </body>
 </html>
