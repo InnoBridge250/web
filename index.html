@@ -28,7 +28,7 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
-      <a href="https://forms.gle/8x4u5Mx1uGB4btxB7" class="cta-button">Enroll In Our Trainings</a>
+      
     </div>
   </header>
 
@@ -42,41 +42,49 @@
     <div class="hero-content">
       <h1>Empowering Businesses with Data-Driven Insights</h1>
       <p>Your trusted partner for innovation, market research, and financial planning.</p>
-      <a href="#learn-more" class="hero-button">Learn More</a>
+      
     </div>
   </section>
 
   <!-- About-->
 
   <section class="about-us" id="about">
+    <!-- Heading Section -->
+    <div class="about-header">
+      <h2>About INNO Bridge</h2>
+    </div>
     <div class="about-container">
       <!-- Text Section -->
       <div class="about-text">
-        <h2>About INNO Bridge</h2>
-        <p>
+        <p id="description">
           At INNO Bridge, we empower startups and entrepreneurs with actionable insights to make informed decisions. From customized market research to data-driven analytics, our solutions are designed to help businesses grow and succeed in competitive markets.
         </p>
+        <div class="about-cards">
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-bullseye"></i>
+            </div>
+            <h3>Our Mission</h3>
+            <p>To bridge the gap between data and decision-making for startups and small businesses.</p>
+          </div>
+          <div class="card">
+            <div class="card-icon">
+              <i class="fas fa-lightbulb"></i>
+            </div>
+            <h3>Our Vision</h3>
+            <p>To be the leading consultancy firm driving business growth through innovation and data.</p>
+          </div>
+        </div>
       </div>
-      <!-- Cards Section -->
-      <div class="about-cards">
-        <div class="card">
-          <div class="card-icon">
-            <i class="fas fa-bullseye"></i>
-          </div>
-          <h3>Our Mission</h3>
-          <p>To bridge the gap between data and decision-making for startups and small businesses.</p>
-        </div>
-        <div class="card">
-          <div class="card-icon">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <h3>Our Vision</h3>
-          <p>To be the leading consultancy firm driving business growth through innovation and data.</p>
-        </div>
+      <!-- Image Section -->
+      <div class="about-image">
+        <img src="About pic.jpeg" alt="INNO Bridge Team" />
       </div>
     </div>
   </section>
-
+  
+  
+  
   <!--Our Team-->
   <section class="team" id="team">
     <div class="team-container">
@@ -148,7 +156,7 @@
           </div>
           <h3>Business Insights</h3>
           <p>Get actionable insights to make informed decisions and achieve sustainable growth.</p>
-          <a href="#about" class="service-btn">Learn More</a>
+          
         </div>
         
         <!-- Service 2 -->
@@ -158,7 +166,7 @@
           </div>
           <h3>Market Research</h3>
           <p>Customized market research to help you understand your industry and customers better.</p>
-          <a href="#about" class="service-btn">Learn More</a>
+          
         </div>
         
         <!-- Service 3 -->
@@ -168,7 +176,7 @@
           </div>
           <h3>Financial Planning</h3>
           <p>We provide financial planning tools to guide your business through every stage of growth.</p>
-          <a href="#about" class="service-btn">Learn More</a>
+          
         </div>
         
         <!-- Service 4 -->
@@ -178,7 +186,17 @@
           </div>
           <h3>Data Analysis</h3>
           <p>Harness the power of data to make smarter decisions and improve business outcomes.</p>
-          <a href="#about" class="service-btn">Learn More</a>
+          
+        </div>
+
+        <!-- Service 5 -->
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="fas fa-clipboard"></i>
+          </div>
+          <h3>Data Analysis Training</h3>
+          <p>Unlock the power of our Data Analytics course. Learn essential techniques to analyze, interpret, and visualize data to drive smarter business decisions.</p>
+          
         </div>
       </div>
     </div>
@@ -229,9 +247,9 @@
       <div class="footer-section social">
         <h4>Follow Us</h4>
         <div class="social-icons">
-        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/inno_bridge/" class="social-icon"><i class="fab fa-instagram"></i></a>
         <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.linkedin.com/company/inno-bridge/?viewAsMember=true" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
         </div>
       </div>
     </div>
@@ -245,6 +263,22 @@
         const navLinks = document.querySelector('.nav-links');
         navLinks.classList.toggle('active');
     }
+    document.addEventListener("DOMContentLoaded", () => {
+    const aboutSection = document.querySelector(".about-container");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            aboutSection.classList.add("scroll-animate");
+          }
+        });
+      },
+      { threshold: 0.3 } // Trigger when 30% of the section is visible
+    );
+
+    observer.observe(aboutSection);
+  });
     
 </script>
 </body>
